@@ -44,66 +44,22 @@ button:hover {
 opacity: .8;
 }
 
-textarea, input {
-width: 100%;
-padding: 12px;
-margin-top: 10px;
-border-radius: 8px;
-border: 1px solid #ccc;
-}
-</style>
+textarea {
+"SHE ROCK SHE CREATES™ PROMPTFORGE AI DESIGN BRIEF\n\n" +
+"DESIGN REQUEST:\n" +
+idea +
+"\n\nSTYLE & QUALITY REQUIREMENTS:\n" +
+"- Professional custom design\n" +
+"- High resolution\n" +
+"- Clean, bold outlines\n" +
+"- Balanced layout\n" +
+"- Print-ready for shirts and party favors\n" +
+"- Easy to resize without losing quality\n" +
+"- Avoid tiny details that may disappear during printing\n\n" +
+"FINAL GOAL:\n" +
+"Create a design that looks professional on screen and works beautifully as a finished product.";
 
-</head>
-
-<body>
-
-<div class="header">
-<h1>She Rock She Creates™</h1>
-<p>PromptForge AI Design Assistant</p>
-</div>
-
-<div class="container">
-
-<div class="card">
-
-<h2>Create Your Design Idea</h2>
-
-<p>
-Tell PromptForge what you want to create:
-</p>
-
-<textarea id="idea" placeholder="Example: Birthday shirt for a 10 year old girl, pink butterflies, glitter style..."></textarea>
-
-<br><br>
-
-<button onclick="generatePrompt()">
-Create My AI Prompt
-</button>
-
-<h3>Your Design Prompt:</h3>
-
-<p id="result"></p>
-
-</div>
-
-</div>
-<script>
-
-function generatePrompt() {
-
-let idea = document.getElementById("idea").value;
-
-if (idea.trim() === "") {
-document.getElementById("result").innerHTML =
-"Please describe what you want to create first.";
-return;
-}
-
-let prompt =
-"Create a high-quality professional design for: " + idea +
-". Make it print-ready, clear, detailed, and suitable for shirts, party favors, and small business products. Include strong colors, clean outlines, balanced layout, and a design that can be resized without losing quality.";
-
-document.getElementById("result").innerHTML = prompt;
+document.getElementById("result").innerText = prompt;
 
 }
 
