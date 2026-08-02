@@ -1,35 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>She Rock She Creates™ Prompt Generator</title>
+<title>She Rock She Creates™ PromptForge AI</title>
+
+<style>
+body {
+font-family: Arial, sans-serif;
+background: #fff0f7;
+margin: 0;
+padding: 0;
+}
+
+.header {
+background: #8b2c83;
+color: white;
+text-align: center;
+padding: 30px;
+}
+
+.container {
+max-width: 800px;
+margin: auto;
+padding: 25px;
+}
+
+.card {
+background: white;
+border-radius: 15px;
+padding: 25px;
+box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+button {
+background: #8b2c83;
+color: white;
+border: none;
+padding: 12px 20px;
+border-radius: 10px;
+cursor: pointer;
+}
+
+button:hover {
+opacity: .8;
+}
+
+textarea, input {
+width: 100%;
+padding: 12px;
+margin-top: 10px;
+border-radius: 8px;
+border: 1px solid #ccc;
+}
+</style>
+
 </head>
 
-<body style="font-family:Arial; background:#f7f2ff; text-align:center; padding:40px;">
+<body>
 
-<h1>💜 She Rock She Creates™</h1>
+<div class="header">
+<h1>She Rock She Creates™</h1>
+<p>PromptForge AI Design Assistant</p>
+</div>
 
-<h2>AI Prompt Generator</h2>
+<div class="container">
 
-<p>Welcome! Let's create an amazing custom AI prompt.</p>
+<div class="card">
 
-<label><b>What would you like to create?</b></label>
+<h2>Create Your Design Idea</h2>
 
-<br><br>
+<p>
+Tell PromptForge what you want to create:
+</p>
 
-<select>
-<option>Select One</option>
-<option>Business Plan</option>
-<option>Resume</option>
-<option>Children's Book</option>
-<option>Ebook</option>
-<option>Social Media Content</option>
-<option>Product Description</option>
-<option>Marketing Email</option>
-</select>
+<textarea id="idea" placeholder="Example: Birthday shirt for a 10 year old girl, pink butterflies, glitter style..."></textarea>
 
 <br><br>
 
-<button>Generate Prompt</button>
+<button onclick="generatePrompt()">
+Create My AI Prompt
+</button>
+
+<h3>Your Design Prompt:</h3>
+
+<p id="result"></p>
+
+</div>
+
+</div>
+<script>
+
+function generatePrompt() {
+
+let idea = document.getElementById("idea").value;
+
+if (idea.trim() === "") {
+document.getElementById("result").innerHTML =
+"Please describe what you want to create first.";
+return;
+}
+
+let prompt =
+"Create a high-quality professional design for: " + idea +
+". Make it print-ready, clear, detailed, and suitable for shirts, party favors, and small business products. Include strong colors, clean outlines, balanced layout, and a design that can be resized without losing quality.";
+
+document.getElementById("result").innerHTML = prompt;
+
+}
+
+</script>
 
 </body>
 </html>
