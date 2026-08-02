@@ -109,7 +109,7 @@ margin-top: 15px;
 <h2>Create Your Design Idea</h2>
 
 <p>
-Tell PromptForge what you want to create:
+Tell me what you want me to create:
 </p>
 
 <textarea id="idea" placeholder="Example: Birthday shirt for a 10 year old girl, pink butterflies, glitter style..."></textarea>
@@ -232,7 +232,11 @@ document.getElementById("result").innerText =
 "Please describe what you want to create first.";
 return;
 }
-
+if (product === "" || occasion === "" || style === "" || colors === "") {
+document.getElementById("result").innerText =
+"Please choose an option from every dropdown.";
+return;
+}
 let prompt =
 "SHE ROCK SHE CREATES™ DESIGN BRIEF\n\n" +
 
