@@ -119,7 +119,11 @@ Generate My Design Image
 <h3>Your Design Prompt:</h3>
 
 <p id="result"></p>
+<br>
 
+<button onclick="copyPrompt()">
+Copy My Prompt
+</button>
 </div>
 
 </div>
@@ -199,6 +203,16 @@ document.getElementById("imageResult").innerText =
 "Your image generation feature is ready for connection. Your design prompt is being prepared.";
 
 }
+function copyPrompt() {
+
+let promptText = document.getElementById("result").innerText;
+
+navigator.clipboard.writeText(promptText);
+
+alert("Your She Rock She Creates™ prompt has been copied!");
+
+}
+  
 </script>
 
 </body>
