@@ -99,7 +99,23 @@ i
 <button onclick="generatePrompt()">
 Create My AI Prompt
 </button>
+<br><br>
 
+<h2>Generate Your Design Image</h2>
+
+<p>
+Upload a photo or use your finished prompt to create your design.
+</p>
+
+<input type="file" id="imageUpload" accept="image/*">
+
+<br><br>
+
+<button onclick="generateImage()">
+Generate My Design Image
+</button>
+
+<div id="imageResult"></div>
 <h3>Your Design Prompt:</h3>
 
 <p id="result"></p>
@@ -169,7 +185,20 @@ colors +
 document.getElementById("result").innerText = prompt;
 
 }
+function generateImage() {
 
+let prompt = document.getElementById("result").innerText;
+
+if (prompt === "") {
+document.getElementById("imageResult").innerText =
+"Create your design prompt first.";
+return;
+}
+
+document.getElementById("imageResult").innerText =
+"Your image generation feature is ready for connection. Your design prompt is being prepared.";
+
+}
 </script>
 
 </body>
