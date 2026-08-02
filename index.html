@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>She Rock She Creates™ AI Design Studio</title>
+<title>She Rock She Creates™ Design Studio</title>
 
 <style>
 body {
@@ -69,7 +69,7 @@ margin-top: 15px;
 
 <div class="header">
 <h1>She Rock She Creates™</h1>
-<p>AI Design Studio</p>
+<p>Design Studio</p>
 </div>
 
 <div class="container">
@@ -84,16 +84,76 @@ Tell PromptForge what you want to create:
 
 <textarea id="idea" placeholder="Example: Birthday shirt for a 10 year old girl, pink butterflies, glitter style..."></textarea>
 <label>Product Type:</label>
-<input id="product" placeholder="Example: Shirt, tumbler, party favor">
+
+<select id="product">
+<option value="">Choose a product</option>
+<option>T-Shirt</option>
+<option>Hoodie</option>
+<option>Sweatshirt</option>
+<option>Tumbler</option>
+<option>Mug</option>
+<option>Party Favor</option>
+<option>Invitation</option>
+<option>Flyer</option>
+<option>Business Card</option>
+<option>Sticker</option>
+<option>Banner</option>
+<option>Logo</option>
+<option>Custom</option>
+</select>
 
 <label>Occasion:</label>
-<input id="occasion" placeholder="Example: Birthday, business, holiday">
+
+<select id="occasion">
+<option value="">Choose an occasion</option>
+<option>Birthday</option>
+<option>Baby Shower</option>
+<option>Graduation</option>
+<option>Wedding</option>
+<option>Anniversary</option>
+<option>Memorial</option>
+<option>Family Reunion</option>
+<option>Business</option>
+<option>Holiday</option>
+<option>Vacation</option>
+<option>Sports</option>
+<option>Church</option>
+<option>Custom</option>
+</select>
 
 <label>Design Style:</label>
-<input id="style" placeholder="Example: Cute, luxury, cartoon, realistic">
 
-<label>Color Preferences:</label>
-<input id="colors" placeholder="Example: Pink, purple, gold">
+<select id="style">
+<option value="">Choose a style</option>
+<option>Cute</option>
+<option>Luxury</option>
+<option>Cartoon</option>
+<option>Realistic</option>
+<option>Watercolor</option>
+<option>Vintage</option>
+<option>Minimalist</option>
+<option>Graffiti</option>
+<option>Anime</option>
+<option>3D</option>
+<option>Custom</option>
+</select>
+<label>Color Palette:</label>
+
+<select id="colors">
+<option value="">Choose a color palette</option>
+<option>Pink & Gold</option>
+<option>Pink & Purple</option>
+<option>Black & Gold</option>
+<option>Black & White</option>
+<option>Blue & Silver</option>
+<option>Red & Black</option>
+<option>Rose Gold</option>
+<option>Rainbow</option>
+<option>Pastel</option>
+<option>Earth Tones</option>
+<option>Neon</option>
+<option>Custom</option>
+</select>
 <br><br>
 
 <button onclick="generatePrompt()">
@@ -144,7 +204,7 @@ return;
 }
 
 let prompt =
-"SHE ROCK SHE CREATES™ PROMPTFORGE AI DESIGN BRIEF\n\n" +
+"SHE ROCK SHE CREATES™ DESIGN BRIEF\n\n" +
 
 "PRODUCT TYPE:\n" +
 "Create a professional design suitable for shirts, party favors, small business products, and print applications.\n\n" +
