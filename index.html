@@ -83,7 +83,17 @@ Tell PromptForge what you want to create:
 </p>
 
 <textarea id="idea" placeholder="Example: Birthday shirt for a 10 year old girl, pink butterflies, glitter style..."></textarea>
+<label>Product Type:</label>
+<input id="product" placeholder="Example: Shirt, tumbler, party favor">
+i
+<label>Occasion:</label>
+<input id="occasion" placeholder="Example: Birthday, business, holiday">
 
+<label>Design Style:</label>
+<input id="style" placeholder="Example: Cute, luxury, cartoon, realistic">
+
+<label>Color Preferences:</label>
+<input id="colors" placeholder="Example: Pink, purple, gold">
 <br><br>
 
 <button onclick="generatePrompt()">
@@ -103,7 +113,10 @@ Create My AI Prompt
 function generatePrompt() {
 
 let idea = document.getElementById("idea").value;
-
+let product = document.getElementById("product").value;
+let occasion = document.getElementById("occasion").value;
+let style = document.getElementById("style").value;
+let colors = document.getElementById("colors").value;
 if (idea.trim() === "") {
 document.getElementById("result").innerText =
 "Please describe what you want to create first.";
@@ -118,6 +131,22 @@ let prompt =
 
 "DESIGN REQUEST:\n" +
 idea +
+"\n\n" +
+
+"PRODUCT TYPE:\n" +
+product +
+"\n\n" +
+
+"OCCASION:\n" +
+occasion +
+"\n\n" +
+
+"DESIGN STYLE:\n" +
+style +
+"\n\n" +
+
+"COLOR PREFERENCES:\n" +
+colors +
 "\n\n" +
 
 "DESIGN DIRECTION:\n" +
